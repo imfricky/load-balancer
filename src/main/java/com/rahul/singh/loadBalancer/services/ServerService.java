@@ -15,6 +15,7 @@ import java.util.UUID;
 public class ServerService {
 
     public static final String SERVER_MARKED_HEALTHY_SUCCESSFULLY = "Server marked healthy successfully";
+    public static final String SERVER_MARKED_UNHEALTHY_SUCCESSFULLY = "Server marked unhealthy successfully";
     List<Server> servers = new ArrayList<>();
 
     List<Server> unhealthyServers = new ArrayList<>();
@@ -81,7 +82,7 @@ public class ServerService {
             return SERVER_MARKED_HEALTHY_SUCCESSFULLY;
         } else {
             markServerUnhealthy(serverCode);
-            return "Server marked unhealthy successfully";
+            return SERVER_MARKED_UNHEALTHY_SUCCESSFULLY;
         }
     }
 
@@ -109,7 +110,5 @@ public class ServerService {
         Server concernedServer = unhealthyServers.stream().filter(server -> server.getCode().equals(serverCode)).findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException(String.format("Server with given id %s not found", serverCode.toString())));
         concernedServer.setStatus(ServerStatus.HEALTHY);
-        servers.add(concernedServer);
-        unhealthyServers.remove(concernedServer);
     }
 }

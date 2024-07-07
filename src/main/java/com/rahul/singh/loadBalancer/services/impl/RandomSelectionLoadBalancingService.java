@@ -13,7 +13,6 @@ public class RandomSelectionLoadBalancingService implements LoadBalancingFactory
     @Autowired
     ServerService serverService;
 
-
     @Override
     public Server getServer() throws InvalidRequestException {
         int min = 0;

@@ -60,7 +60,7 @@ public class LoadBalancerService {
     }
 
     // This function is stimulating server errors randomly
-    private boolean shouldServerThrowError() {
+    public boolean shouldServerThrowError() {
         return Math.random() < 0.5 && isSecondsInSpecifiedRanges();
     }
 
