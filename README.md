@@ -12,6 +12,9 @@ The load balancer system consists of the following components:
 - **Server Pool**: Consists of multiple servers that handle the requests sent from the load balancer.
 - **Scheduled Job**: Regularly checks the health of servers and removes any that are not responding.
 
+  <img width="1448" alt="image" src="https://github.com/imfricky/load-balancer/assets/25294554/4ab977b6-db2c-42b2-a54f-03a6fb5403fe">
+
+
 ## Low-Level Design (LLD)
 The load balancer's operation can be detailed as follows:
 
