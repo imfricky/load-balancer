@@ -13,6 +13,7 @@ public class ServerMaintenanceJob {
     @Autowired
     ServerService serverService;
 
+    // Runs every 30 seconds
     @Scheduled(cron = "*/30 * * * * *")
     public void removeUnhealthyServers() {
         log.info("Starting scheduled task to remove unhealthy servers...");

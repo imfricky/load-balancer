@@ -8,7 +8,9 @@ import lombok.Data;
 public class ServerDTO {
 
     private String code;
+
     private String status;
+
     private Integer totalConnectionsCount;
 
 }

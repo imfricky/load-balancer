@@ -3,9 +3,9 @@ package com.rahul.singh.loadBalancer.factories;
 import com.rahul.singh.loadBalancer.enums.LoadBalancingType;
 import com.rahul.singh.loadBalancer.exceptions.InvalidRequestException;
 import com.rahul.singh.loadBalancer.services.LoadBalancingFactoryService;
-import com.rahul.singh.loadBalancer.services.RoundRobinLoadBalancingService;
 import com.rahul.singh.loadBalancer.services.impl.LeastConnectionLoadBalancingService;
 import com.rahul.singh.loadBalancer.services.impl.RandomSelectionLoadBalancingService;
+import com.rahul.singh.loadBalancer.services.impl.RoundRobinLoadBalancingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

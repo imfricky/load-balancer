@@ -1,6 +1,5 @@
 package com.rahul.singh.loadBalancer.services;
 
-import com.rahul.singh.loadBalancer.entities.Server;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,12 +24,6 @@ public class InitialServerSetupService {
         for (int i = 0; i < serverCount; i++) {
             UUID serverCode = UUID.randomUUID();
             serverService.addServer(serverCode);
-        }
-
-        // Remove later
-        log.info("Initial servers setup complete");
-        for (Server server : serverService.getServers()) {
-            log.info("Server {}", server);
         }
     }
 
